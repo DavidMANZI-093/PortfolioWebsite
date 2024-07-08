@@ -3,4 +3,60 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 62.5%;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+:root {
+    --primary-color: #090611;
+    --secondary-color: #a806244b;
+    --border-color1: #cc072b;
+    --border-color2: #a8062470;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+
+header {
+    display: flex;
+    padding: 1rem 12rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px var(--border-color2);
+}
+
+div.logo-box {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    border: solid 1px var(--border-color1);
+    background-color: var(--secondary-color);
+}
+
+nav.main-nav {
+    display: flex;
+    align-items: center;
+    min-width: 16rem;
+    height: 4rem;
+}
+
+ul.nav-list, ul.nav-list * {
+    display: flex;
+}
+
+ul.nav-list {
+    gap: 3.6rem
+}
+
+a.nav-link {
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    border: solid 1px var(--border-color1);
+    background-color: var(--secondary-color);
 }
