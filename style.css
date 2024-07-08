@@ -16,6 +16,7 @@
 
 body {
     display: flex;
+    padding: 0 12rem;
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
@@ -41,7 +42,6 @@ div.logo-box {
 nav.main-nav {
     display: flex;
     align-items: center;
-    min-width: 16rem;
     height: 4rem;
 }
 
@@ -59,4 +59,75 @@ a.nav-link {
     border-radius: 0.4rem;
     border: solid 1px var(--border-color1);
     background-color: var(--secondary-color);
+}
+
+button.nav-btn {
+    display: none;
+    width: 3.6rem;
+    height: 3.2rem;
+    border-radius: 0.4rem;
+    border: solid 1px var(--border-color1);
+    background-color: var(--secondary-color);
+}
+
+/* --------------------------------------------------*/
+
+@media (min-width: 0) and (max-width: 576px) {
+    /* XS Screen Devices*/
+    body {
+        padding: 0 1rem;
+    }
+
+    header {
+        padding: 1rem 1rem;
+    }
+
+    ul.nav-list {
+        display: none;
+    }
+
+    button.nav-btn {
+        display: flex;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    /* SM Screen Devices*/
+    body {
+        padding: 0 2rem;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    ul.nav-list {
+        display: none;
+    }
+
+    button.nav-btn {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    /* MD Screen Devices*/
+    body {
+        padding: 0 6rem;
+    }
+
+    header {
+        padding: 1rem 6rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    /* LG Screen Devices*/
+    body {
+        padding: 0 8rem;
+    }
+
+    header {
+        padding: 1rem 8rem;
+    }
 }
