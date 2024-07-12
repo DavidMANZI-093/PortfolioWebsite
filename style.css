@@ -11,6 +11,7 @@
 :root {
     --primary-color: #001229;
     --secondary-color: #00295e75;
+    --tertiary-color: #00295e49;
     --foreground-color1: #f4f9ff;
     --foreground-color2: #f4f9ffb6;
     --foreground-color3: #f4f9ff85;
@@ -297,7 +298,7 @@ div.about {
 div.cont-col {
     display: flex;
     height: 100%;
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
     border-radius: 0.4rem;
 }
 
@@ -307,7 +308,46 @@ div.col1 {
     justify-content: space-evenly;
     align-items: center;
     gap: 2rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
+}
+
+div.col1 h2 {
+    font-size: 2.8rem;
+    letter-spacing: -0.02rem;
+    color: var(--foreground-color2);
+}
+
+div.col1 h2 em {
+    font-style: normal;
+    font-size: inherit;
+    color: var(--foreground-hg-color2);
+}
+
+div.col1 .my-photo {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    background-color: var(--foreground-hg-color1);
+    background-image: url(./files/myPhoto.png);
+    background-size: cover;
+}
+
+div.col1 .p-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.64rem;
+}
+
+div.col1 p {
+    font-size: 1.48rem;
+    text-align: justify;
+    color: var(--foreground-color3);
+}
+
+div.col1 p em.strong {
+    font-size: inherit;
+    color: var(--foreground-hg-color1);
+    font-style: normal;
 }
 
 /* ------------------------------------------------- */
