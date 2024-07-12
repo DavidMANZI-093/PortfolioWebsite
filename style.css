@@ -298,17 +298,17 @@ div.about {
 div.cont-col {
     display: flex;
     height: 100%;
-    background-color: var(--tertiary-color);
     border-radius: 0.4rem;
 }
 
 div.col1 {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
     padding: 0 2rem;
+    background-color: var(--tertiary-color);
 }
 
 div.col1 h2 {
@@ -347,6 +347,12 @@ div.col1 p {
 div.col1 p em.strong {
     font-size: inherit;
     color: var(--foreground-hg-color1);
+    font-style: normal;
+}
+
+div.col1 p em.weak {
+    font-size: inherit;
+    color: var(--foreground-color2);
     font-style: normal;
 }
 
