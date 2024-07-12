@@ -13,6 +13,7 @@
     --foreground-color1: #f4f9ff;
     --foreground-color2: #f4f9ffb6;
     --foreground-color3: #f4f9ff85;
+    --foreground-hg-color1: #00479e;
     --scroll-track: #00193a;
     --scroll-thumb1: #002b63;
     --scroll-thumb2: #00449c;
@@ -66,9 +67,16 @@ div.logo-box h2 {
     letter-spacing: 0.016rem;
 }
 
+div.logo-box h2 em {
+    font-style: normal;
+    font-size: 2.4rem;
+    color: var(--foreground-hg-color1);
+    letter-spacing: 0.016rem;
+}
+
 nav.main-nav {
     display: flex;
-    height: 4rem;git 
+    height: 4rem;
     align-items: center;
 }
 
@@ -126,7 +134,7 @@ li.nav-c.active i, li.nav-c.active .nav-link {
 
 li.nav-c.active::after {
     width: 100%;
-    /* transform: scaleX(1); */
+    transform: scaleX(1);
     background-color: var(--foreground-color1);
 }
 
@@ -156,7 +164,7 @@ button.menu-btn {
 }
 
 button.menu-btn i {
-    color: var(--foreground-color1);
+    color: var(--foreground-color2);
     font-size: 2.8rem;
 }
 
@@ -166,7 +174,7 @@ button.menu-btn i {
     min-width: 100%;
     justify-content: center;
     align-items: center;
-    transition: 300ms ease;
+    transition: 300ms ease-in-out;
 }
 
 .positioner.menu-open {
