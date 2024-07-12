@@ -10,6 +10,9 @@
 :root {
     --primary-color: #001229;
     --secondary-color: #00295e75;
+    --foreground-color1: #f4f9ff;
+    --foreground-color2: #f4f9ffb6;
+    --foreground-color3: #f4f9ff85;
     --scroll-track: #00193a;
     --scroll-thumb1: #002b63;
     --scroll-thumb2: #00449c;
@@ -42,18 +45,30 @@ header {
     border-bottom: solid 1px var(--border-color2);
 }
 
-div.logo-box {
-    width: 4.8rem;
-    height: 4.8rem;
+div.logo {
+    width: 4.2rem;
+    height: 4.2rem;
     border-radius: 50%;
     background-color: var(--secondary-color);
     background-image: url(./files/hero-img1.jpg);
     background-size: cover;
 }
 
+div.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+div.logo-box h2 {
+    font-size: 2.4rem;
+    color: var(--foreground-color3);
+    letter-spacing: 0.016rem;
+}
+
 nav.main-nav {
     display: flex;
-    height: 4rem;
+    height: 4rem;git 
     align-items: center;
 }
 
@@ -65,20 +80,109 @@ ul.nav-list {
     gap: 3.6rem
 }
 
-a.nav-link {
-    width: 6rem;
-    height: 2rem;
-    border-radius: 0.4rem;
-    background-color: var(--secondary-color);
+li.nav-c {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0.16rem 1.2rem;
+    font-size: 1.6rem;
+    color: var(--foreground-color3);
 }
 
-button.nav-btn {
+li.nav-c::after {
+    position: absolute;
+    bottom: -0.2rem;
+    content: "";
+    height: 0.24rem;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 0.4rem;
+    width: 0;
+    display: block;
+    background-color: var(--foreground-color3);
+    transition: transform 300ms ease-in-out;
+}
+
+li.nav-c:hover::after {
+    transform: scaleX(1);
+    width: 100%;
+}
+
+li.nav-c:hover::after, li.nav-c:hover, li.nav-c:hover .nav-link {
+    color: var(--foreground-color2);
+}
+
+li.nav-c:hover::after {
+    background-color: var(--foreground-color2);
+}
+
+li.nav-c.active i, li.nav-c.active .nav-link {
+    color: var(--foreground-color1);
+}
+
+li.nav-c.active::after {
+    width: 100%;
+    /* transform: scaleX(1); */
+    background-color: var(--foreground-color1);
+}
+
+.nav-c i {
+    font-size: 1.72rem;
+}
+
+a.nav-link {
+    display: flex;
+    font-size: 1.6rem;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    color: var(--foreground-color3);
+}
+
+button.menu-btn {
     display: none;
-    width: 3.6rem;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    cursor: pointer;
+    width: 3.2rem;
     height: 3.2rem;
     border-radius: 0.4rem;
     border: none;
     background-color: var(--secondary-color);
+}
+
+button.menu-btn i {
+    color: var(--foreground-color1);
+    font-size: 2.8rem;
+}
+
+.positioner {
+    position: absolute;
+    display: flex;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 300ms ease;
+}
+
+.positioner.menu-open {
+    left: 0%;
+}
+
+.positioner.menu-open.inactive {
+    left: 100%;
+}
+
+.positioner.menu-close.active {
+    left: 0%;
+}
+
+.positioner.menu-close {
+    left: -100%;
 }
 
 section.sections {
@@ -112,7 +216,7 @@ div.content-box {
         display: none;
     }
 
-    button.nav-btn {
+    button.menu-btn {
         display: flex;
     }
 
@@ -132,7 +236,7 @@ div.content-box {
         display: none;
     }
 
-    button.nav-btn {
+    button.menu-btn {
         display: flex;
     }
 
@@ -152,7 +256,7 @@ div.content-box {
         display: none;
     }
 
-    button.nav-btn {
+    button.menu-btn {
         display: flex;
     }
 
