@@ -3,8 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 62.5%;
-    user-select: none;
+    -webkit-user-select: none;
     -webkit-user-drag: none;
+    user-select: none;
     scroll-behavior: smooth;
 }
 
@@ -265,17 +266,25 @@ div.home div.action-bx button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.64rem 1.24rem;
     border-radius: 0.4rem;
-    gap: 0.72rem;
     border: none;
     color: var(--foreground-color3);
     background-color: var(--foreground-hg-color2);
 }
 
+div.home div.action-bx button a:hover, div.home div.action-bx button a:hover i {
+    color: var(--foreground-color1);
+}
+
 div.home div.action-bx button a {
+    display: flex;
+    padding: 0.64rem 1.24rem;
     color: var(--foreground-color2);
     text-decoration: none;
+    gap: 0.72rem;
+}
+
+div.home div.action-bx button a span {
     font-size: 1.56rem;
     letter-spacing: 0.036rem;
 }
@@ -433,7 +442,8 @@ div.col1 p em.weak {
 /* ------------------------------------------------- */
 
 ::-webkit-scrollbar {
-    width: 0.8rem;
+    width: 0.4rem;
+    height: 0.4rem
 }
 
 ::-webkit-scrollbar-track {
