@@ -6,3 +6,12 @@ menuBtn.addEventListener("click", () => {
     openMenu.classList.toggle("inactive");
     closeMenu.classList.toggle("active");
 });
+
+// ----------------------------------------------------
+
+const header = document.querySelector('#header');
+const contentBoxes = document.querySelectorAll('.content-box');
+
+contentBoxes.forEach(contentBox => {
+    contentBox.style.marginTop = header.clientHeight + 'px';
+});

@@ -30,12 +30,14 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    position: absolute;
+    position: relative;
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     flex-direction: column;
     background-color: var(--primary-color);
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 header {
@@ -199,17 +201,19 @@ button.menu-btn i {
 }
 
 section.sections {
+    position: relative;
     z-index: 2;
     top: 0;
-    position: relative;
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 2rem 8rem;
+    scroll-snap-align: start;
 }
 
 div.content-box {
     display: flex;
+    margin-top: 5.5%;
     width: 100%;
     min-height: 100%;
     background-color: var(--secondary-color);
@@ -218,7 +222,6 @@ div.content-box {
 
 div.home {
     position: relative;
-    top: -5.5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
