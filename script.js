@@ -10,8 +10,14 @@ menuBtn.addEventListener("click", () => {
 // ----------------------------------------------------
 
 const header = document.querySelector('#header');
-const contentBoxes = document.querySelectorAll('.content-box');
+const contentBoxes = document.querySelectorAll('.content-box');function updateContentBoxMargin () {
+    contentBoxes.forEach(contentBox => {
+        contentBox.style.marginTop = header.clientHeight + 'px';
+    });
+}
 
-contentBoxes.forEach(contentBox => {
-    contentBox.style.marginTop = header.clientHeight + 'px';
-});
+updateContentBoxMargin();
+window.addEventListener('DOMContentLoaded', updateContentBoxMargin);
+window.addEventListener('resize', updateContentBoxMargin);
+
+// ----------------------------------------------------
