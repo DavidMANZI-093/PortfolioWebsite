@@ -278,21 +278,23 @@ div.home div.action-bx button a:hover, div.home div.action-bx button a:hover i {
 
 div.home div.action-bx button a {
     display: flex;
+    align-items: center ;
+    justify-content: center;
     padding: 0.64rem 1.24rem;
     color: var(--foreground-color2);
     text-decoration: none;
+    font-size: 3.2rem;
     gap: 0.72rem;
 }
 
 div.home div.action-bx button a span {
-    font-size: 1.56rem;
+    font-size: 1.48rem;
     letter-spacing: 0.036rem;
 }
 
 div.home div.action-bx button i {
     color: var(--foreground-color2);
     text-decoration: none;
-    font-size: 1.92rem;
 }
 
 div.about {
