@@ -320,12 +320,12 @@ div.cont-col {
 
 div.col1 {
     display: flex;
-    flex-basis: 25%;
+    flex-basis: 30%;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
     background-color: var(--tertiary-color);
 }
 
@@ -376,10 +376,10 @@ div.col1 p em.weak {
 
 div.col2 {
     position: relative;
-    flex-basis: 75%;
+    flex-basis: 70%;
     display: flex;
     flex-direction: column;
-    width: calc(100% - 2rem);
+    width: 100%;
     justify-content: space-between;
     gap: 2rem;
 }
@@ -390,7 +390,6 @@ div.col2 .rows {
     width: 100%;
     height: 100%;
     gap: 2rem;
-    flex-wrap: wrap;
 }
 
 div.col2 .rows .cols {
@@ -402,11 +401,13 @@ div.col2 .rows .cols {
     height: 100%;
     border-radius: 0.4rem;
     padding: 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
     background-color: var(--tertiary-color);
 }
 
-div.col2 .row1 .col1 h2 {
-    font-size: 2.8rem;
+div.col2 .row1 .col1 h2 { /* OR <h3>...</h3> */
+    font-size: 2.4rem;
     letter-spacing: -0.02rem;
     color: var(--foreground-color2);
 }
@@ -437,6 +438,22 @@ div.col2 .row1 h2 em {
     section.sections {
         padding: 2rem 1rem;
     }
+
+    div.about {
+        flex-direction: column;
+    }
+
+    div.col1 {
+        flex-basis: 50%;
+    }
+
+    div.col2 {
+        flex-basis: 50%;
+    }
+
+    div.col2 .rows {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -456,6 +473,22 @@ div.col2 .row1 h2 em {
 
     section.sections {
         padding: 2rem 2rem;
+    }
+
+    div.about {
+        flex-direction: row;
+    }
+
+    div.col1 {
+        flex-basis: 50%;
+    }
+
+    div.col2 {
+        flex-basis: 50%;
+    }
+
+    div.col2 .rows {
+        flex-direction: column;
     }
 }
 
@@ -477,6 +510,22 @@ div.col2 .row1 h2 em {
     section.sections {
         padding: 2rem 6rem;
     }
+
+    div.about {
+        flex-direction: row;
+    }
+
+    div.col1 {
+        flex-basis: 50%;
+    }
+
+    div.col2 {
+        flex-basis: 50%;
+    }
+
+    div.col2 .rows {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -488,6 +537,14 @@ div.col2 .row1 h2 em {
 
     section.sections {
         padding: 2rem 8rem;
+    }
+
+    div.col1 {
+        flex-basis: 35%;
+    }
+
+    div.col2 {
+        flex-basis: 65%;
     }
 }
 

@@ -21,3 +21,18 @@ window.addEventListener('DOMContentLoaded', updateContentBoxMargin);
 window.addEventListener('resize', updateContentBoxMargin);
 
 // ----------------------------------------------------
+
+const navs = document.querySelectorAll(".nav-c");
+
+function paginate(event) {
+    navs.forEach(nav => {
+        nav.classList.remove('active');
+    });
+    event.target.closest('.nav-c').classList.add('active');
+}
+
+navs.forEach(nav => {
+    nav.addEventListener('click', (event) => {
+        paginate(event);
+    });
+});
