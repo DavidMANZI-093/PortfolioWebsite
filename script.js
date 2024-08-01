@@ -7,7 +7,7 @@ menuBtn.addEventListener("click", () => {
     closeMenu.classList.toggle("active");
 });
 
-// ----------------------------------------------------hh
+// ----------------------------------------------------
 
 const header = document.querySelector('#header');
 const contentBoxes = document.querySelectorAll('.content-box');function updateContentBoxMargin () {
