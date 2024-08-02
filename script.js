@@ -31,8 +31,45 @@ function paginate(event) {
     event.target.closest('.nav-c').classList.add('active');
 }
 
+function paginate1(page) {
+    navs.forEach(nav => {
+        nav.classList.remove('active');
+    });
+    document.querySelector(`.nav-c[data-page="${page}"]`).classList.add('active');
+}
+
 navs.forEach(nav => {
     nav.addEventListener('click', (event) => {
         paginate(event);
     });
+});
+
+// ----------------------------------------------------
+
+const languageLables = document.querySelectorAll(".l-label");
+
+languageLables.forEach((label, index) => {
+    const i = index + 1;
+    if(i < 10) {
+        label.innerText = `0${i}`;
+    } else {
+        label.innerText = i;
+    }
+});
+
+// ----------------------------------------------------
+
+document.addEventListener('scroll', () => {
+    const viewport = window.scrollY;
+    if(viewport >= 60 && viewport < 788) {
+        paginate1("home");
+    } else if (viewport >= 788 && viewport < 1515) {
+        paginate1("about");
+    } else if (viewport >= 1515 && viewport < 2242) {
+        paginate1("projects");
+    } else if (viewport >= 2242) {
+        paginate1("contacs");
+    } else {
+        window.alert("Something is wrong with the paginator!")
+    }
 });

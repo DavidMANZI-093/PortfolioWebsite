@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="./fontClasses.css">
     <title>@DavidMANZI_093</title>
 </head>
@@ -20,10 +21,10 @@
         </div>
         <nav id="navbar" class="main-nav">
             <ul class="nav-list">
-                <li class="nav-c active"><a href="#welcome-section" class="nav-link poppins-regular"><i class='bx bx-home-alt-2' ></i><span>Home</span></a></li>
-                <li class="nav-c"><a href="#about-section" class="nav-link poppins-regular"><i class='bx bx-user'></i><span>About Me</span></a></li>
-                <li class="nav-c"><a href="#projects-section" class="nav-link poppins-regular"><i class='bx bx-code-alt'></i><span>Projects</span></a></li>
-                <li class="nav-c"><a href="#contacts-section" class="nav-link poppins-regular"><i class='bx bx-info-circle' ></i><span>Contact me</span></a></li>
+                <li class="nav-c active" page-name="home"><a href="#welcome-section" class="nav-link poppins-regular"><i class='bx bx-home-alt-2' ></i><span>Home</span></a></li>
+                <li class="nav-c" page-name="about"><a href="#about-section" class="nav-link poppins-regular"><i class='bx bx-user'></i><span>About Me</span></a></li>
+                <li class="nav-c" page-name="projects"><a href="#projects-section" class="nav-link poppins-regular"><i class='bx bx-code-alt'></i><span>Projects</span></a></li>
+                <li class="nav-c" page-name="contacts"><a href="#contacts-section" class="nav-link poppins-regular"><i class='bx bx-info-circle' ></i><span>Contact me</span></a></li>
             </ul>
 
             <button class="menu-btn" type="button">
@@ -75,13 +76,99 @@
             <div class="cont-col col2">
                 <div class="rows row1">
                     <div class="cols col1">
-                        <h2 class="poppins-medium">Coding Languages</h2>
+                        <h2 class="poppins-medium">Programming Languages</h2>
+                        <div class="coding-languages">
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-1" class="devicon-javascript-plain"></i>
+                                <hr>
+                                <p class="poppins-light">JavaScript</p>
+                            </div>
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-2" class="devicon-cplusplus-plain"></i>
+                                <hr>
+                                <p class="poppins-light">C++</p>
+                            </div>
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-3" class="devicon-python-plain"></i>
+                                <hr>
+                                <p class="poppins-light">Pyhton</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="cols"></div>
+                    <div class="cols col2">
+                        <h2 class="poppins-medium">More...</h2>
+                        <div class="coding-languages">
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-4" class="devicon-c-plain-wordmark"></i>
+                                <hr>
+                                <p class="poppins-light">C</p>
+                            </div>
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-5" class="devicon-java-plain"></i>
+                                <hr>
+                                <p class="poppins-light">Java</p>
+                            </div>
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-6" class="devicon-php-plain"></i>
+                                <hr>
+                                <p class="poppins-light">PhP</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="rows row2">
-                    <div class="cols"></div>
-                    <div class="cols"></div>
+                    <div class="cols col3">
+                        <h2 class="poppins-medium">A few more...</h2>
+                        <div class="coding-languages">
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-7" class="devicon-html5-plain"></i>
+                                <hr>
+                                <p class="poppins-light">HTML5</p>
+                            </div>
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-8" class="devicon-css3-plain"></i>
+                                <hr>
+                                <p class="poppins-light">CSS3</p>
+                            </div>
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-9" class="devicon-mysql-original"></i>
+                                <hr>
+                                <p class="poppins-light">MySQL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cols">
+                        <h2 class="poppins-medium">A few more skills...</h2>
+                        <div class="coding-languages">
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-10" class="devicon-github-plain"></i>
+                                <hr>
+                                <p class="poppins-light">GitHub</p>
+                            </div>
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-11" class="devicon-git-plain"></i>
+                                <hr>
+                                <p class="poppins-light">Git</p>
+                            </div>
+                            <div class="language">
+                                <span class="l-label poppins-medium"></span>
+                                <i id="lang-12" class="devicon-bash-plain"></i>
+                                <hr>
+                                <p class="poppins-light">Bash</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

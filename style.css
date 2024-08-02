@@ -402,20 +402,133 @@ div.col2 .rows .cols {
     border-radius: 0.4rem;
     padding: 2rem;
     flex-direction: column;
-    justify-content: flex-start;
+    gap: 2rem;
+    align-items: center;
     background-color: var(--tertiary-color);
 }
 
-div.col2 .row1 .col1 h2 { /* OR <h3>...</h3> */
-    font-size: 2.4rem;
+div.col2 .row1 h2,
+div.col2 .row2 h2 { /* OR <h3>...</h3> */
+    font-size: 1.72rem;
     letter-spacing: -0.02rem;
     color: var(--foreground-color2);
 }
 
-div.col2 .row1 h2 em {
+div.col2 .row1 h2 em,
+div.col2 .row2 h2 em {
     font-style: normal;
     font-size: inherit;
     color: var(--foreground-hg-color2);
+}
+
+div.col2 .row1 .cols .coding-languages,
+div.col2 .row2 .cols .coding-languages {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+}
+
+div.col2 .row1 .cols .coding-languages .language,
+div.col2 .row2 .cols .coding-languages .language {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-basis: calc(100% * 1 / 3);
+    height: 100%;
+    border-radius: 0.4rem;
+    background-color: var(--secondary-color);
+}
+
+div.col2 .row1 .cols .coding-languages .language span.l-label,
+div.col2 .row2 .cols .coding-languages .language span.l-label {
+    position: absolute;
+    top: 0.48rem;
+    left: 0.48rem;
+    display: flex;
+    height: 2rem;
+    min-width: 2rem;
+    font-size: 1.36rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--foreground-color2);
+}
+
+div.col2 .row1 .cols .coding-languages .language i,
+div.col2 .row2 .cols .coding-languages .language i {
+    font-size: 7.2rem;
+    color: var(--foreground-color3);
+}
+
+div.col2 .row1 .cols .coding-languages .language p,
+div.col2 .row2 .cols .coding-languages .language p {
+    color: var(--foreground-color2);
+    font-size: 1.48rem;
+}
+
+div.col2 .row1 .cols .coding-languages .language hr,
+div.col2 .row2 .cols .coding-languages .language hr {
+    border: none;
+    border-top: solid 1px var(--foreground-color3);
+    width: 80%;
+    height: 0.2rem;
+}
+
+/* ------------------------------------------------- */
+
+#lang-1 {
+    color: #f7de1ea4;
+}
+
+#lang-2 {
+    color: #00599C;
+}
+
+#lang-3 {
+    color: #ffd53bb0;
+}
+
+#lang-4 {
+    color: #A8B9CC;
+}
+
+#lang-5 {
+    color: #007396;
+}
+
+#lang-6 {
+    color: #777BB4;
+}
+
+#lang-7 {
+    color: #E34F26;
+}
+
+#lang-8 {
+    color: #1572B6;
+}
+
+#lang-9 {
+    color: #4479A1;
+}
+
+#lang-10 {
+    color: #727ae9;
+}
+
+#lang-11 {
+    color: #F05032;
+}
+
+#lang-12 {
+    color: #4EAA25;
 }
 
 /* ------------------------------------------------- */
