@@ -206,6 +206,30 @@ button.menu-btn i {
     left: -100%;
 }
 
+ul.nav-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 61px;
+    z-index: 9;
+    border-radius: 0.4rem;
+}
+
+ul.nav-menu li.nav-c {
+    padding: 0.64rem 1rem;
+    background-color: var(--scroll-thumb1);
+}
+
+ul.nav-menu li.nav-c:hover {
+    background-color: var(--foreground-hg-color2);
+    color: var(--foreground-color1);
+}
+
+ul.nav-menu li.nav-c:after {
+    display: none;
+}
+
 section.sections {
     position: relative;
     z-index: 2;
@@ -237,8 +261,8 @@ div.home {
 
 div.home .my-photo {
     display: flex;
-    height: 16rem;
-    width: 16rem;
+    height: 18.4rem;
+    width: 18.4rem;
     border-radius: 50%;
     background: url(./files/hero-img1.jpg);
     background-size: cover;

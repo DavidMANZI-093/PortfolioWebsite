@@ -63,7 +63,6 @@ languageLables.forEach((label, index) => {
 
 document.addEventListener('scroll', () => {
     const viewport = window.scrollY;
-    console.log(viewport);
     if(viewport >= 0 && viewport < 488) {
         paginate1("home");
     } else if (viewport >= 488 && viewport < 1307) {
