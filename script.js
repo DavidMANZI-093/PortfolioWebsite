@@ -35,7 +35,9 @@ function paginate1(page) {
     navs.forEach(nav => {
         nav.classList.remove('active');
     });
-    document.querySelector(`.nav-c[data-page="${page}"]`).classList.add('active');
+
+    const element = document.querySelector(`.nav-c[page="${page}"]`);
+    element.classList.add('active');
 }
 
 navs.forEach(nav => {
@@ -61,14 +63,15 @@ languageLables.forEach((label, index) => {
 
 document.addEventListener('scroll', () => {
     const viewport = window.scrollY;
-    if(viewport >= 0 && viewport < 788) {
+    console.log(viewport);
+    if(viewport >= 0 && viewport < 488) {
         paginate1("home");
-    } else if (viewport >= 788 && viewport < 1515) {
+    } else if (viewport >= 488 && viewport < 1307) {
         paginate1("about");
-    } else if (viewport >= 1515 && viewport < 2242) {
+    } else if (viewport >= 1307 && viewport < 1980) {
         paginate1("projects");
-    } else if (viewport >= 2242) {
-        paginate1("contacs");
+    } else if (viewport >= 1980) {
+        paginate1("contacts");
     } else {
         window.alert("Something is wrong with the paginator!")
     }
