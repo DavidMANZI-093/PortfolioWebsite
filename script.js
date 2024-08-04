@@ -34,6 +34,8 @@ navBox.addEventListener('click', () => {
     setTimeout(() => {
         navBox.classList.toggle('inactive');
     }, 100);
+    openMenu.classList.toggle("inactive");
+    closeMenu.classList.toggle("active");
 });
 
 
