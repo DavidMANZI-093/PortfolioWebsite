@@ -1,11 +1,42 @@
 const menuBtn = document.querySelector(".menu-btn");
 const closeMenu = document.querySelector(".menu-close");
 const openMenu = document.querySelector(".menu-open");
+const navBox = document.querySelector(".nav-box");
+const menuBox = document.querySelector(".nav-menu");
 
 menuBtn.addEventListener("click", () => {
     openMenu.classList.toggle("inactive");
     closeMenu.classList.toggle("active");
+
+    if(!(navBox.classList.contains('active'))) {
+        navBox.classList.toggle('inactive');
+        setTimeout(() => {
+            navBox.classList.toggle('active');
+        }, 100);
+        setTimeout(() => {
+            menuBox.classList.toggle('inactive');
+        }, 50);
+    }
+    
+    if(navBox.classList.contains('active')) {
+        menuBox.classList.toggle('inactive');
+        navBox.classList.toggle('active');
+        setTimeout(() => {
+            navBox.classList.toggle('inactive');
+        }, 100);
+    }
+    
 });
+
+navBox.addEventListener('click', () => {
+    menuBox.classList.toggle('inactive');
+    navBox.classList.toggle('active');
+    setTimeout(() => {
+        navBox.classList.toggle('inactive');
+    }, 100);
+});
+
+
 
 // ----------------------------------------------------
 

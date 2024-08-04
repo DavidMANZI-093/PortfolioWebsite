@@ -13,6 +13,7 @@
     --primary-color: #001229;
     --secondary-color: #00295e75;
     --tertiary-color: #00295e49;
+    --quaternary-color: #000c1bcc;
     --foreground-color1: #f4f9ff;
     --foreground-color2: #f4f9ffb6;
     --foreground-color3: #f4f9ff85;
@@ -206,28 +207,75 @@ button.menu-btn i {
     left: -100%;
 }
 
-ul.nav-menu {
+div.nav-box {
     position: fixed;
+    top: 61px;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    justify-content: flex-end;
+    background-color: var(--quaternary-color);
+    opacity: 0%;
+    transition: opacity 300ms ease;
+}
+
+div.nav-box.inactive {
+    display: none;
+}
+
+div.nav-box.active {
+    opacity: 100%;
+}
+
+ul.nav-menu.inactive {
+    transform: scale(0);
+}
+
+ul.nav-menu {
+    position: relative;
     display: flex;
     flex-direction: column;
-    right: 0;
-    top: 61px;
-    z-index: 9;
+    top: 2rem;
+    right: 2rem;
+    height: fit-content;
     border-radius: 0.4rem;
+    list-style: none;
+    background-color: var(--scroll-track);
+    transform: scale(1);
+    transition: transform 300ms ease;
+    transform-origin: top right;
 }
 
-ul.nav-menu li.nav-c {
-    padding: 0.64rem 1rem;
-    background-color: var(--scroll-thumb1);
+ul.nav-menu hr {
+    width: 100%;
+    border: none;
+    border-top: solid 1px var(--border-color2);
 }
 
-ul.nav-menu li.nav-c:hover {
-    background-color: var(--foreground-hg-color2);
-    color: var(--foreground-color1);
+ul.nav-menu li.nav-b {
+    transition: 100ms ease-out;
 }
 
-ul.nav-menu li.nav-c:after {
-    display: none;
+ul.nav-menu li.nav-b:active {
+    background-color: var(--secondary-color);
+}
+
+ul.nav-menu li.nav-b a {
+    display: flex;
+    align-items: center;
+    padding: 0.64rem 1.64rem;
+    gap: 1rem;
+    width: 100%;
+    color: var(--foreground-color3);
+}
+
+ul.nav-menu li.nav-b a span {
+    font-size: 1.96rem;
+}
+
+ul.nav-menu li.nav-b a i {
+    font-size: 1.64rem;
 }
 
 section.sections {
