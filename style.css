@@ -18,7 +18,7 @@
     --foreground-color2: #f4f9ffb6;
     --foreground-color3: #f4f9ff85;
     --foreground-hg-color1: #00479e;
-    --foreground-hg-color2: #00479e;
+    --foreground-hg-color2: #003372;
     --scroll-track: #00193a;
     --scroll-thumb1: #002b63;
     --scroll-thumb2: #00449c;
@@ -619,6 +619,100 @@ div.col2 .row2 .cols .coding-languages .language hr {
 
 /* ------------------------------------------------- */
 
+div.contacts {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.8rem;
+    padding: 2rem;
+    background-color: inherit;
+}
+
+div.contacts h2 {
+    font-size: 2.4rem;
+    color: var(--foreground-color2);
+}
+
+div.contacts h2 em {
+    font-style: normal;
+    font-size: inherit;
+    color: var(--foreground-hg-color1);
+}
+
+form {
+    position: relative;
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 0.4rem;
+}
+
+form div {
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 1.64rem 2rem;
+    width: 100%;
+    gap: 0.72rem;
+    border: none;
+    background-color: var(--scroll-track);
+    border-radius: 0.4rem;
+}
+
+form label {
+    font-size: 1.4rem;
+    color: var(--foreground-color2);
+}
+
+form label em {
+    font-style: normal;
+    font-size: inherit;
+    color: var(--foreground-color3);
+}
+
+form input, form textarea {
+    font-size: 1.48rem;
+    padding: 0.64rem 1.24rem;
+    content: 'AaBbCcDd';
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--foreground-color2);
+}
+
+form input:focus, form textarea:focus {
+    outline: solid 1px var(--border-color2);
+}
+
+form input[type="submit"] {
+    background-color: var(--foreground-hg-color2);
+    padding: 0.64rem 1.64rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    /* width: fit-content; */
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--foreground-hg-color1);
+}
+
+form input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+form textarea {
+    resize: none;
+}
+
+/* ------------------------------------------------- */
+
 @media (min-width: 0) and (max-width: 576px) {
     /* XS Screen Devices*/
 
@@ -651,6 +745,10 @@ div.col2 .row2 .cols .coding-languages .language hr {
     }
 
     div.col2 .rows {
+        flex-direction: column;
+    }
+
+    form div {
         flex-direction: column;
     }
 }
@@ -689,6 +787,10 @@ div.col2 .row2 .cols .coding-languages .language hr {
     div.col2 .rows {
         flex-direction: column;
     }
+
+    form div {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -723,6 +825,10 @@ div.col2 .row2 .cols .coding-languages .language hr {
     }
 
     div.col2 .rows {
+        flex-direction: column;
+    }
+
+    form div {
         flex-direction: column;
     }
 }

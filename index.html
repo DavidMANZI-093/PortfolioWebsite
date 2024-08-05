@@ -189,7 +189,36 @@
         <div class="content-box"></div>
     </section>
     <section id="contacts-section" class="sections">
-        <div class="content-box"></div>
+        <div class="content-box contacts">
+            <h2 class="poppins-medium"><em>Contact</em> ME!</h2>
+            <form action="./" method="POST">
+                <div>
+                    <fieldset>
+                        <label class="poppins-regular" for="name">Your Full Name:</label>
+                        <input class="poppins-regular" placeholder="Name here!" id="name" type="text" name="sender_names" aria-autocomplete="off" required>
+                    </fieldset>
+                    <fieldset>
+                        <label class="poppins-regular" for="subject">Message Subject:</label>
+                        <input class="poppins-regular" placeholder="Subject of your message!" id="subject" type="text" name="email_subject" aria-autocomplete="off" required>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <label class="poppins-regular" for="email" >Your Email:</label>
+                        <input class="poppins-regular" placeholder="example@gmail.com" id="email" type="email" name="email_address" aria-autocomplete="email" required>
+                    </fieldset>
+                    <fieldset>
+                        <label class="poppins-regular" for="telephone">Your Phone Number <em>(optional)</em>:</label>
+                        <input class="poppins-regular" placeholder="..." id="telephone" type="tel" name="sender_telephone">
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <label class="poppins-regular" for="message">Message Content:</label>
+                    <textarea class="poppins-regular" placeholder="Comment, idea, suggestion, or anything..." id="message" rows="6" autocomplete="off" required></textarea>
+                </fieldset>
+                <input class="poppins-regular" type="submit" value="Send Message">
+            </form>
+        </div>
     </section>
 
     <script type="module" src="./script.js"></script>
