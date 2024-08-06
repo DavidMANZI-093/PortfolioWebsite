@@ -50,7 +50,7 @@ header {
     justify-content: space-between;
     background-color: var(--primary-color);
     border-bottom: solid 1px var(--border-color2);
-    box-shadow: 5px 0px 5px var(--primary-color);
+    box-shadow: 5px 0px 5px var(--quaternary-color);
 }
 
 div.logo-box {
@@ -314,7 +314,7 @@ div.home .my-photo {
     border-radius: 50%;
     background: url(./files/hero-img1.jpg);
     background-size: cover;
-    box-shadow: 5px 5px 10px var(--primary-color);
+    box-shadow: 5px 5px 10px var(--quaternary-color);
 }
 
 div.desc-text {
@@ -501,7 +501,6 @@ div.col2 .row2 .cols .coding-languages {
     width: 100%;
     height: 100%;
     gap: 1rem;
-    box-shadow: 0px 0px 7.2px var(--primary-color);
 }
 
 div.col2 .row1 .cols .coding-languages .language,
@@ -517,6 +516,7 @@ div.col2 .row2 .cols .coding-languages .language {
     height: 100%;
     border-radius: 0.4rem;
     background-color: var(--secondary-color);
+    box-shadow: 0 0 10px 0.1px var(--quaternary-color);
 }
 
 div.col2 .row1 .cols .coding-languages .language span.l-label,
@@ -649,11 +649,17 @@ form {
     border-radius: 0.4rem;
 }
 
+form div.form-box {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--scroll-track);
+    box-shadow: 0 0 5px 1px var(--quaternary-color);
+}
+
 form div {
     position: relative;
     display: flex;
     width: 100%;
-    gap: 2rem;
 }
 
 form fieldset {
@@ -663,7 +669,7 @@ form fieldset {
     width: 100%;
     gap: 0.72rem;
     border: none;
-    background-color: var(--scroll-track);
+    background-color: var(--tertiary-color);
     border-radius: 0.4rem;
 }
 
@@ -686,10 +692,12 @@ form input, form textarea {
     border: none;
     color: var(--foreground-color2);
     width: 100%;
+    box-shadow: 0 0 10px var(--quaternary-color);
+    outline: solid 1px var(--border-color2);
 }
 
 form input:focus, form textarea:focus {
-    outline: solid 1px var(--border-color2);
+    outline: solid 1px var(--border-color1);
 }
 
 form input[type="submit"] {
@@ -697,7 +705,7 @@ form input[type="submit"] {
     padding: 0.64rem 1.64rem;
     border-radius: 0.4rem;
     cursor: pointer;
-    /* width: fit-content; */
+    box-shadow: none;
 }
 
 form input[type="submit"]:hover {
@@ -716,9 +724,17 @@ form textarea {
 
 div.contact-info {
     display: flex;
-    width: 100%;
+    width: 80%;
     gap: 2rem;
     padding: 2rem;
+}
+
+div.contact-info div.info-box {
+    display: flex;
+    position: relative;
+    width: 100%;
+    gap: 2rem;
+    flex-direction: column;
 }
 
 div.contact-info div.info {
@@ -728,7 +744,7 @@ div.contact-info div.info {
     flex-direction: column;
     background-color: var(--secondary-color);
     border-radius: 0.4rem;
-    box-shadow: 0 0 10px var(--quaternary-color);
+    box-shadow: 0 0 5px 1px var(--quaternary-color);
 }
 
 div.contact-info div.info span, div.contact-info div.info a.link-box {
@@ -741,6 +757,7 @@ div.contact-info div.info span, div.contact-info div.info a.link-box {
     color: var(--foreground-color2);
     padding: 2rem;
     gap: 2rem;
+    cursor: pointer;
 }
 
 div.contact-info div.info span i, div.contact-info div.info a.link-box i {
@@ -862,6 +879,7 @@ footer p {
     }
     
     div.contact-info {
+        width: 100%;
         flex-direction: column;
     }
 }
@@ -907,7 +925,7 @@ footer p {
 
     form {
         width: 80%;
-        padding: 0;;
+        padding: 0;
     }
 
     form div {
@@ -915,6 +933,7 @@ footer p {
     }
 
     div.contact-info {
+        width: 80%;
         flex-direction: column;
     }
 }
@@ -964,6 +983,7 @@ footer p {
     }
 
     div.contact-info {
+        width: 80%;
         flex-direction: column;
     }
 }
@@ -994,6 +1014,11 @@ footer p {
     form {
         width: 70%;
         padding: 0;;
+    }
+    
+    div.contact-info {
+        width: 70%;
+        flex-direction: column;
     }
 }
 
