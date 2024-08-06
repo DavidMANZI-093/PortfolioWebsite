@@ -108,3 +108,16 @@ document.addEventListener('scroll', () => {
         window.alert("Something is wrong with the paginator!")
     }
 });
+
+// ----------------------------------------------------
+
+const phoneNumber = document.querySelector('#toBeCopied');
+const copyNote = document.querySelector('.hidden-msg');
+
+phoneNumber.closest('span').addEventListener('click', () => {
+    navigator.clipboard.writeText(phoneNumber.innerText);
+    copyNote.classList.toggle('inactive');
+    setTimeout(() => {
+        copyNote.classList.toggle('inactive');
+    }, 2000);
+});

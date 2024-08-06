@@ -603,7 +603,7 @@ div.col2 .row2 .cols .coding-languages .language hr {
 }
 
 #lang-10 {
-    color: #727ae9;
+    color: #339933;
     text-shadow: 10px 10px 10px var(--primary-color);
 }
 
@@ -685,6 +685,7 @@ form input, form textarea {
     background-color: var(--primary-color);
     border: none;
     color: var(--foreground-color2);
+    width: 100%;
 }
 
 form input:focus, form textarea:focus {
@@ -713,6 +714,105 @@ form textarea {
 
 /* ------------------------------------------------- */
 
+div.contact-info {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+div.contact-info div.info {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    border-radius: 0.4rem;
+    box-shadow: 0 0 10px var(--quaternary-color);
+}
+
+div.contact-info div.info span, div.contact-info div.info a.link-box {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: var(--foreground-color2);
+    padding: 2rem;
+    gap: 2rem;
+}
+
+div.contact-info div.info span i, div.contact-info div.info a.link-box i {
+    font-size: 3.6rem;
+}
+
+div.text {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    gap: 0.16rem;
+}
+
+a.link-box div.text p.detail {
+    text-decoration: underline;
+}
+
+div.text a:hover {
+    text-decoration: underline;
+}
+
+div.contact-info div.info span p em, div.contact-info div.info a.link-box p em {
+    font-size: inherit;
+    font-style: normal;
+}
+
+.detail {
+    color: var(--foreground-color1);
+}
+
+.detail em.hidden-msg {
+    color: #008000;
+    transition: opacity 100ms ease-out;
+}
+
+.detail em.inactive {
+    opacity: 0%;
+}
+
+/* ------------------------------------------------- */
+
+.contact-1 {
+    color: #25D366;
+}
+
+.contact-2 {
+    color: #d14836;
+}
+
+.contact-3 {
+    color: #4078c0;
+}
+
+.contact-4 {
+    color: #f5f6f7;
+}
+
+/* ------------------------------------------------- */
+
+footer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 0.64rem 1rem;
+}
+
+footer p {
+    color: var(--foreground-color3);
+    font-size: 1.24rem;
+}
+
+/* ------------------------------------------------- */
 @media (min-width: 0) and (max-width: 576px) {
     /* XS Screen Devices*/
 
@@ -748,7 +848,20 @@ form textarea {
         flex-direction: column;
     }
 
+    div.contacts {
+        padding: 0;
+    }
+
+    form {
+        width: 100%;
+        padding: 0;;
+    }
+
     form div {
+        flex-direction: column;
+    }
+    
+    div.contact-info {
         flex-direction: column;
     }
 }
@@ -788,7 +901,20 @@ form textarea {
         flex-direction: column;
     }
 
+    div.contacts {
+        padding: 0;
+    }
+
+    form {
+        width: 80%;
+        padding: 0;;
+    }
+
     form div {
+        flex-direction: column;
+    }
+
+    div.contact-info {
         flex-direction: column;
     }
 }
@@ -828,7 +954,16 @@ form textarea {
         flex-direction: column;
     }
 
-    form div {
+    div.contacts {
+        padding: 0;
+    }
+
+    form {
+        width: 80%;
+        padding: 0;
+    }
+
+    div.contact-info {
         flex-direction: column;
     }
 }
@@ -850,6 +985,15 @@ form textarea {
 
     div.col2 {
         flex-basis: 65%;
+    }
+
+    div.contacts {
+        padding: 0;
+    }
+
+    form {
+        width: 70%;
+        padding: 0;;
     }
 }
 
