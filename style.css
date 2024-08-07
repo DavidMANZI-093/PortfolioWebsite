@@ -619,6 +619,89 @@ div.col2 .row2 .cols .coding-languages .language hr {
 
 /* ------------------------------------------------- */
 
+div.projects {
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+  gap: 3.6rem;
+}
+
+div.projects h2 {
+  font-size: 2.4rem;
+  color: var(--foreground-color2);
+}
+
+div.projects h2 em {
+  font-size: inherit;
+  font-style: normal;
+  color: var(--foreground-hg-color1);
+}
+
+div.projects .desc p {
+  font-size: 1.48rem;
+  text-align: Justify;
+  color: var(--foreground-color2);
+}
+
+div.desc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.24rem;
+}
+
+div.projects .desc p a {
+  font-size: inherit;
+  font-style: normal;
+  text-decoration: underline;
+  color: var(--foreground-hg-color2);
+}
+
+div.projects-box {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  gap: 2rem;
+}
+
+div.projects .cont {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+div.project-tile {
+  display: flex;
+  width: 100%;
+  height: 16rem;
+  background-color: var(--secondary-color);
+  border-radius: 0.4rem;
+  box-shadow: 0 0 10px 0.1px var(--quaternary-color);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+}
+
+/* ------------------------------------------------- */
+
+div.project-tile:nth-of-type(1) {
+  background-image: url("./files/proj-img1.jpg");
+}
+
+div.project-tile:nth-of-type(2) {
+  background-image: url("./files/proj-img2.jpg");
+}
+
+div.project-tile:nth-of-type(3) {
+  background-image: url("./files/././files/proj-img3.jpg");
+}
+
+div.project-tile:nth-of-type(4) {
+  
+}
+
+/* ------------------------------------------------- */
+
 div.contacts {
     flex-direction: column;
     justify-content: center;
@@ -883,6 +966,15 @@ footer p {
         width: 100%;
         flex-direction: column;
     }
+    
+    div.projects-box {
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    div.cont {
+      flex-direction: column;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -937,6 +1029,15 @@ footer p {
         width: 80%;
         flex-direction: column;
     }
+    
+    div.projects-box {
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    div.cont {
+      flex-direction: column;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -986,6 +1087,18 @@ footer p {
     div.contact-info {
         width: 80%;
         flex-direction: column;
+    }
+    
+    div.projects-box {
+      flex-direction: column;
+    }
+    
+    div.cont {
+      flex-direction: column;
+    }
+    
+    div.project-tile {
+      height: 100%;
     }
 }
 
